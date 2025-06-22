@@ -25,9 +25,8 @@ body {
 #container {
   display: flex;
   flex-direction: column;
-  width: 70%;
-  margin-left: 15%;
-  margin-top: 5%;
+  width: 60%;
+  margin: 5% 20% 5% 20%;
   border: 2px solid var(--darkest-black);
   box-shadow: 4px 4px 0 var(--darkest-black);
   justify-content: flex-start;
@@ -63,7 +62,6 @@ body {
   font-size: 1.5rem;
   color: var(--darkest-black);
   margin-top: 5px;
-  margin-bottom: 5px;
 }
 
 #nav {
@@ -82,7 +80,6 @@ body {
   font-family: var(--title-font);
   color: var(--darkest-black);
   text-decoration: none;
-  text-shadow: 2px 2px 0 var(--accent-red), 4px 4px 0 var(--darkest-black);
 }
 
 .nav_link:last-of-type {
@@ -92,7 +89,6 @@ body {
 .nav_link:hover {
   background-color: var(--darkest-black);
   color: var(--accent-red);
-  text-shadow: 2px 2px 0 var(--darkest-black), 4px 4px 0 var(--accent-red);
 }
 
 .content {
@@ -166,13 +162,11 @@ body {
   font-family: var(--title-font);
   font-size: 1em;
   text-decoration: none;
-  color: var(--darkest-black);
-  text-shadow: 1px 1px 0 var(--accent-yellow), 2px 2px 0 var(--darkest-black);
+  color: var(--accent-red);
 }
 
 .post_list_entry_link:hover {
-  color: var(--accent-red);
-  text-shadow: none;
+  color: var(--darkest-black);
 }
 
 .tag_list {
@@ -201,7 +195,7 @@ body {
   background-color: var(--darkest-black);
   padding: 0.1em;
   border: 2px solid var(--accent-red);
-  font-size: 1.1em;
+  font-size: 1em;
   font-weight: 700;
 }
 
@@ -216,8 +210,9 @@ body {
   font-family: var(--text-font);
   color: var(--darkest-black);
   padding: 2px;
-  font-size: 1.1em;
-  line-height: 1em;
+  align-self: center;
+  font-size: 0.8em;
+  line-height: 0.8em;
   background-color: var(--accent-red);
   border-radius: 10px;
   border: 1px solid var(--darkest-black);
@@ -326,7 +321,7 @@ i {
 #social_icons {
   display: flex;
   flex-direction: row;
-  column-gap: 1.5em;
+  column-gap: 1em;
   align-self: center;
   margin-bottom: 1em;
 }
