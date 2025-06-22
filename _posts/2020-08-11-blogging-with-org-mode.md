@@ -8,6 +8,7 @@ title: "How I built a simple static blog with org-mode"
 date: 2020-08-11 00:00:00
 note: orgblog
 exerpt: "There's always something new to discover with Emacs and org-mode, and building a blog was my way of wading into deeper waters - no longer content to just get my feet wet."
+permalink: /blogging-with-org-mode
 ---
 
 There's always something new to discover with Emacs and org-mode, and building a blog was my way of wading into deeper waters - no longer content to just get my feet wet. 
