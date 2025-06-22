@@ -68,6 +68,7 @@ body {
   font-size: 1.5rem;
   color: var(--darkest-black);
   margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 #nav {
@@ -319,4 +320,18 @@ blockquote {
   border: 1px solid var(--dark-grey);
   box-shadow: 1px 1px 0 var(--accent-yellow), 4px 4px 0 var(--accent-red);
   font-size: 0.9em;
+}
+
+i {
+  color: var(--darkest-black);
+  padding: 0;
+  margin: 0;
+}
+
+#social_icons {
+  display: flex;
+  flex-direction: row;
+  column-gap: 1.5em;
+  align-self: center;
+  margin-bottom: 1em;
 }
