@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<div class="post_header">
+    <h2 class="post_title">{{ page.title }}</h2>
+    <p class="post_meta">
+        <span class="post_date">{{ page.date | date_to_string }}</span>
+        <span class="tag_list">
+            {% for tag in page.tags %}
+            <a class="tag_link" href="{{ site.url }}/tags/{{tag}}.html">{{ tag }}</a> 
+            {% endfor %}
+        </span>
+    </p>
+</div>
+<div class="post_content">
+    {% if page.note %}
+    <blockquote class="post_note">
+        {% assign note = site.data.postnotes | where: "name", page.note %}
+        {{ note[0].text }}
+    </blockquote>
+    {% endif %}
+    {{ content }}
+</div>

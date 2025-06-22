@@ -1,0 +1,15 @@
+---
+layout: default
+---
+{% assign tag = page.title %}
+{% assign tag_posts = site.tags[tag] %}
+<h2 class="tag_header">
+    all posts tagged {{ page.title }}
+</h2>
+<div class="post_list">
+    {% for post in tag_posts %}
+    <div class="post_list_entry">
+        <span class="date_heading">{{ post.date | date_to_string }}: </span><a class="post_list_entry_link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </div>
+    {% endfor %}
+</div>

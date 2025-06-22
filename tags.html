@@ -1,0 +1,10 @@
+---
+layout: default
+---
+
+<h2 class="page_header">All Tags</h2>
+<div class="tag_list_v">
+    {% for tag in site.tags %}
+        <a class="tag_link_v" href="{{site.url}}/tags/{{tag[0]}}.html">{{ tag[0] }}</a>
+        {% endfor %}
+</div>
