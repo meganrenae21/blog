@@ -1,5 +1,7 @@
 - name: about
   link: /about.html
+- name: now
+  link: /now.html
 - name: archives
   link: /archives.html
 - name: tags
