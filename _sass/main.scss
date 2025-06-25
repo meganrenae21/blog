@@ -263,12 +263,25 @@ h3 {
   font-size: 1.3em;
 }
 
+h4 {
+  color: var(--dark-base);
+  margin-left: 1em;
+  font-family: var(--text-font);
+  font-size: 1.1em;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
 p {
   margin-left: 1em;
   margin-right: 1em;
   font-family: var(--text-font);
-  font-size: 1.1em;
+  font-size: 1em;
   color: var(--dark-base);
+}
+
+h4 + p {
+  margin-top: 0;
 }
 
 ul {
