@@ -343,3 +343,19 @@ i {
   align-self: center;
   margin-bottom: 1em;
 }
+
+.fake_link {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: var(--accent-cyan);
+  color: var(--subtle-grey);
+  font-style: italic;
+  font-family: var(--text-font);
+}
+
+.fake_link_2 {
+  text-decoration: none;
+  color: var(--accent-red);
+  font-style: italic;
+  font-family: var(--text-font);
+}

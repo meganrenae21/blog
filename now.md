@@ -31,3 +31,8 @@ Right now, this is what I'm working on:
 
 - Over on codepen, I have a project to finish 15 [Pure CSS Background Patterns](https://codepen.io/megan-durham/pen/QwbVNLY)
 - I am working on an UI that will help me playing my favorite solo RPG, *Ironsworn: Starforged* by Shawn Tomkin. [Sneak peak at Codepen](https://codepen.io/megan-durham/pen/QwbqLXW)
+
+### Interesting and Thought-Provoking Things
+
+- I recently discovered [The Tarot Cards of Tech](https://tarotcardsoftech.artefactgroup.com/), an elegantly designed set of tarot cards with questions designed to enable people to think about how to build and develop technologies responsibly. These cards were created by [The Artefact Group](https://www.artefactgroup.com/), a consulting and design firm focusing on implementing new technologies responsibly. In the age of AI, the ethical implications of tech and data are reaching into every facet of our lives. These cards are tools to help us consider the consequences of our progress,  in order to direct our world toward positive change and growth. 
+  - I love the design of these cards. They ask personal, open-ended questions that have you explore your own values and morals and determine how they align with your work. They help you identify potential pitfalls and dangers that will cause harm, and encourage you to consider how you can do the most good. 
