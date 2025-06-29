@@ -25,15 +25,34 @@ body {
 #container {
   display: flex;
   flex-direction: column;
-  width: 60%;
-  margin: 5% 20% 5% 20%;
-  border: 2px solid var(--darkest-black);
-  box-shadow: 4px 4px 0 var(--darkest-black);
+  width: 80%;
+  margin: 5% 10% 5% 10%;
   justify-content: flex-start;
   align-items: stretch;
-  border-radius: 15px;
   padding: 0;
   margin-bottom: 0;
+  gap: 10px;
+}
+
+#content_box {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+#main_content {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  flex-grow: 3;
+  flex-basis: auto;
+  gap: 10px;
+  margin: 0;
 }
 
 #header {
@@ -44,8 +63,9 @@ body {
   padding: 0;
   align-items: center;
   background-color: var(--accent-yellow);
-  border-radius: 15px 15px 0 0;
-  border-bottom: 1px solid var(--darkest-black);
+  border-radius: 15px;
+  border: 1px solid var(--darkest-black);
+  box-shadow: 4px 4px 0 var(--darkest-black);
 }
 
 #header h1 {
@@ -66,16 +86,25 @@ body {
 
 .nav {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 0;
   background-color: var(--accent-red);
+  justify-content: flex-start;
+  align-items: stretch;
+  border: 1px solid var(--darkest-black);
+  border-radius: 15px;
+  flex-grow: 1;
+  flex-basis: auto;
+  box-shadow: 4px 4px 0 var(--darkest-black);
+  margin: 0;
+  padding: 0;
 }
 
 .nav_link {
-  text-align: center;
+  text-align: right;
   flex-grow: 1;
   flex-basis: auto;
-  border-right: 1px solid var(--darkest-black);
+  border-bottom: 1px solid var(--darkest-black);
   padding: 5px;
   font-family: var(--title-font);
   color: var(--darkest-black);
@@ -83,7 +112,12 @@ body {
 }
 
 .nav_link:last-of-type {
-  border-right: none !important;
+  border-bottom: none !important;
+  border-radius: 0 0 15px 15px;
+}
+
+.nav_link:first-of-type {
+  border-radius: 15px 15px 0 0;
 }
 
 .nav_link:hover {
@@ -93,8 +127,9 @@ body {
 
 .content {
   background-color: var(--accent-yellow);
-  border-top: 1px solid var(--darkest-black);
-  border-bottom: 1px solid var(--darkest-black);
+  border: 1px solid var(--darkest-black);
+  box-shadow: 4px 4px 0 var(--darkest-black);
+  border-radius: 15px;
 }
 
 .page_header {
@@ -227,10 +262,9 @@ body {
 
 #footer {
   background-color: var(--accent-yellow);
-  overflow: hidden;
-  border-top: 1px solid var(--darkest-black);
-  border-radius: 0 0 12px 12px;
-  overflow: hidden;
+  border: 1px solid var(--darkest-black);
+  border-radius: 15px;
+  box-shadow: 4px 4px 0 var(--darkest-black);
   width: 100%;
   text-align: center;
   font-family: var(--text-font);
