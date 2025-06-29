@@ -1,0 +1,243 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>megan renae | From org to jekyll: A new beginning</title>
+        <link rel="stylesheet" href="/assets/css/styles.css" />
+        <script src="https://kit.fontawesome.com/1df0fd71fd.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="container">
+                        <div id="header">
+                <h1>megan renae</h1>
+                <h2>writer, developer, storyteller</h2>
+                <div id="social_icons">
+                    <a href="https://github.com/meganrenae21">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="http://codepen.io/megan-durham">
+                        <i class="fa-brands fa-codepen"></i>
+                    </a>
+                    <a href="http://dev.to/meganrenae21">
+                        <i class="fa-brands fa-dev"></i>
+                    </a>
+                    <a href="http://meganrenae.bsky.social">
+                        <i class="fa-brands fa-bluesky"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="nav">
+    
+    <a class="nav_link" href="/about.html">
+        about
+    </a>
+    
+    <a class="nav_link" href="/now.html">
+        now
+    </a>
+    
+    <a class="nav_link" href="/archives.html">
+        archives
+    </a>
+    
+    <a class="nav_link" href="/tags.html">
+        tags
+    </a>
+    
+    <a class="nav_link" href="/">
+        home
+    </a>
+    
+</div>
+            <div class="content">
+                <div class="post_header">
+    <h2 class="post_title">From org to jekyll: A new beginning</h2>
+    <p class="post_meta">
+        <span class="post_date">28 Jun 2025</span>
+        <span class="tag_list">
+            
+            <a class="tag_link" href="http://localhost:4000/tags/jekyll.html">jekyll</a> 
+            
+            <a class="tag_link" href="http://localhost:4000/tags/blogging.html">blogging</a> 
+            
+        </span>
+    </p>
+</div>
+<div class="post_content">
+    
+    <p>It’s been nearly five years since I published my first blog post using org-mode. While I loved the novelty of using org-mode to create a publish a static website and blog, and I’m proud that I was able to figure out how to make it work (at least in theory), it ended up being a bit too high-maintenance for me on a practical level. My resolve to DIY my blog from the ground up ended up being its undoing.</p>
+
+<p>So now I’m going again, this time using <a href="https://jekyllrb.com">Jekyll</a>. Jekyll was an easy choice. I’m familiar with the platform (my knowledge database, <a href="https://megan-zk.netlify.app/">megan-zk</a>, is written with Jekyll), it’s got a wide user base and extensive documentation, and it’s flexible enough that it can be custommized to just about any purpose.</p>
+
+<p>Mostly, though: Jekyll is easy and quick. My experience with maintaining my blog using org-mode taught me the importance of choosing a platform that allowed me to focus on the important things.</p>
+
+<h3 id="so-was-the-org-blogging-experiment-a-failure">So, was the org blogging experiment a failure?</h3>
+
+<p>Short answer: No.</p>
+
+<p>Long answer: No. My org-mode blog, <a href="https://meganrenae21.github.io/Meg-in-Progress/">Meg in Progress</a>, was a learning experiment. That was what I had intended for it to be, and to that end, it was successful.</p>
+
+<p>And look, there’s nothing <em>wrong</em> with using org-mode as a blogging engine. <a href="https://orgmode.org/worg/org-web.html">Plenty of people have made it work for them</a>. And clearly, once I had gotten it up and running, it was working for me – at least for the <em>four</em> posts I published to Meg in Progress between August 2020 and March 2021.</p>
+
+<p>When I decided to get back to blogging earlier this month, I wanted to use org again. The first thing I did was attempt to revamp the site as a whole, and I quickly ran into issues.</p>
+
+<p>To start, org’s HTML export options are highly configurable, but I found it to be incredibly troublesome to manipulate the top-level HTML files so that my custom elements would be inserted exactly how and where I needed to be on the page.</p>
+
+<p>I wanted to add a footer element to the site. This footer would appear at the bottom of each page on the site. I used the HTML export option <code class="language-plaintext highlighter-rouge">org-html-postamble</code> to achieve this.</p>
+
+<p>The problem was that I wanted the footer to be <em>inside</em> the main <code class="language-plaintext highlighter-rouge">&lt;div id=content&gt;</code> which included the actual post (or page) content.</p>
+
+<p>This is how I wanted it to look:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div id="content"&gt;
+  &lt;div class="header_containter"&gt;
+    &lt;div class="header"&gt;Meg in Progress&lt;/div&gt;
+    &lt;div class="nav"&gt;
+      &lt;a class="navlink"&gt;about&lt;/a&gt;
+      &lt;a class="navlink"&gt;archives&lt;/a&gt;
+      &lt;a class="navlink"&gt;tags&lt;/a&gt;
+      &lt;a class="navlink"&gt;home&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="post_header"&gt;
+    &lt;div class="post_title"&gt;An example title&lt;/div&gt;
+    &lt;div class="post_date"&gt;XX/XX/XXXX&lt;/div&gt;
+    &lt;div class="post_tags"&gt;
+      &lt;a class="taglink"&gt;tag&lt;/a&gt;
+      &lt;a class="taglink"&gt;another&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="post_content"&gt;
+    ...post...
+  &lt;/div&gt;
+  &lt;div class="footnotes"&gt;
+    ...footnote section...
+  &lt;/div&gt;
+  &lt;div class="footer"&gt;
+    Custom footer / org postamble element
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div></div>
+
+<p>Notice how the content container isn’t closed until after the footer is inserted, but the footer is not contained in any <em>other</em> element.</p>
+
+<p>At first, instead of the postamble, I used a custom <code class="language-plaintext highlighter-rouge">include</code> block to export the footer. But when I included the footer at the end of each page and post exported, it ended up like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div id="content"&gt;
+... post content here...
+  &lt;div class="footnotes"&gt;
+  ... some footnotes ...
+    &lt;div class="footer"&gt;
+      footer here
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div></div>
+
+<p>The footer was being <em>inside</em> the last element/section of each post, rather than on its own within the top-level container.</p>
+
+<p>I thought using the postamble export option would fix this. Instead, this was the result:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div id="content"&gt;
+  ... post content here ....
+&lt;/div&gt;
+&lt;div class="postamble"&gt;
+  footer here
+&lt;/div&gt;
+</code></pre></div></div>
+
+<p>This time, the footer ended up <em>outside</em> the content container, which wasn’t what I wanted at all. The idea was that all the content that would appear on each page would within a parent container, in which I could use CSS <code class="language-plaintext highlighter-rouge">display: flex</code> to easily align and justify the elements within that box.</p>
+
+<p>I understand that I could tinker with the export options via trial and error to figure out how to make it work. I could remove the parent container altogether, and apply <code class="language-plaintext highlighter-rouge">display: flex</code> to the <code class="language-plaintext highlighter-rouge">&lt;body&gt;</code> element. I could use the <code class="language-plaintext highlighter-rouge">org-html-preamble</code> option to create my custom header, rather than an import statement, so both the footer and the header would be positioned <em>outside</em> the container. My issue was not that org-mode didn’t allow me to do what I wanted.</p>
+
+<p>The issue was that the time and effort it took to get it right subtracted from the time I had available to actually write. Creating substantive content is the entire purpose of keeping a blog in the first place.</p>
+
+<p>Another issue was that it was backwards enforcement of any the textual format of certain template elements. I used <code class="language-plaintext highlighter-rouge">ya-snippets</code> to create templates, and once a snippet was created, the content of that snippet was not dynamic.</p>
+
+<p>Just take a look at how the first three posts I wrote for <a href="https://meganrenae21.github.io/Meg-in-Progress/">Meg in Progress</a> appear on the index page:</p>
+
+<blockquote>
+  <h4 id="what-the-latest-impreachment-trial-says-about-the-current-state-of-us-politics">What the Latest Impreachment Trial Says about the Current State of US Politics</h4>
+  <p><strong>02/27/21 Sat</strong><br />
+On the weekend before Last, the US Senate concluded the second impeachment trial of former president Donald Trump, who had been impeached for inciting the insurrection at the US Capitol on January 6.. <span class="fake_link">Read more…</span><br />
+<span class="fake_link">politics</span></p>
+
+  <h4 id="blogging-with-org-mode-an-update">Blogging with Org Mode: An Update</h4>
+  <p><strong>Saturday, August 22, 2020</strong><br />
+In my <span class="fake_link">last post</span>, I went over how I set up this blog solely in org-mode. And since that post has been published, I’ve made a few more changes to the configuration and so, in an effort to provide the most up to date information, I figured I’d write a little addendum. <span class="fake_link">Read more…</span><br />
+<span class="fake_link">dev</span></p>
+
+  <h4 id="how-i-built-a-simply-static-blog-with-org-mode--081120-tue">How I built a simply static blog with org-mode || 08/11/20 Tue</h4>
+  <p><span class="fake_link_2">dev</span> There’s always something new to discover with emacs and org-mode, and building a blog was my way of wading into deeper waters - no longer content to just get my feet wet. <span class="fake_link">Read more…</span></p>
+</blockquote>
+
+<p>As you can see, it’s a mess of inconsistency. Changes made to the snippet don’t update the snippets that have already been applied. If I want to make a formatting change that will apply across <em>all</em> entries, including past entries, I would have to manually go back and change each post. Perhaps in time I could have figured out a solution, which brings me back to the previous point: it’s <em>time</em> I’m saving by moving to Jekyll.</p>
+
+<h3 id="more-blogging-less-troubleshooting">More blogging, less troubleshooting</h3>
+
+<p>As a developer, I’m all too familiar with the process of constantly adapting and fixing your code when it breaks or throws out results you didn’t expect. I know that, with a blog created with a static site generator, <em>some</em> technical fine-tuning will always be necessary.</p>
+
+<p>As a blogging platform, Jekyll makes life <em>a lot</em> easier by offering several tools for the technical process:</p>
+
+<ul>
+  <li>Templates and includes allow you complete control over the HTML. Everything on each page and post is laid out exactly like I set it up. I can update styles without getting unexpected results.</li>
+  <li>YAML frontmatter and data files used alongside the <a href="https://shopify.github.io/liquid/">Liquid templating language</a> keep pages and posts formatted consistently across the site.</li>
+  <li>Extensive documentation and a huge userbase means that there are numerous resources available for any updates I want to make or any technical issues I may be having.</li>
+  <li>A stockpile of available themes and plugins can help to instantly implement new features to a site.</li>
+  <li>It is incredibly simple and fast to get up and running, even without a theme, and you can easily integrate your own CSS and javascript files.</li>
+  <li><a href="https://jekyllrb.com/docs/deployment/">Painless deployment</a> to the back-end platform of your choice. This blog uses <a href="https://www.netlify.com/">Netlify</a> which builds the site each time I push a new commit to this blog’s <a href="https://github.com/meganrenae21/blog">Github repository</a>.</li>
+</ul>
+
+<p>This is not to say that Jekyll offers every single thing I wanted right out of the box. While its builds the site from source, convering markdown (.md) files to HTML, Jekyll doesn’t create new pages from scratch. This means that I have to create monthly archive pages and tag pages myself whenever I create the first post in a particular month or use a tag for the first time. What I <em>don’t</em> need to do, though, is update those pages each time I make a new post. Archive lists are created programmatically through the liquid templates. Every post with the tag “jekyll” will show up in the tag page for <a href="./tags/jekyll.html">jekyll</a>, provided the page exists. Every post from June 2025 will show up in the corresponding <a href="./archives/2025/june.html">June 2025 archive page</a> – again, provided the page exists. The markdown source for these tag and archive pages is completely empty except for two lines of YAML frontmatter:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+title: 
+layout: 
+---
+</code></pre></div></div>
+
+<p>The <em>layout</em> is the file in the source <code class="language-plaintext highlighter-rouge">_layouts</code> folder that serves as the HTML template for the page, and the <em>title</em> is used to pull all posts with that tag or from that month.</p>
+
+<p>There is a <a href="https://github.com/pattex/jekyll-tagging">plugin</a> for a simpler implementation of tags. I could also write a script in Python that would generate pages for me. I may do this in the future. However, it’s hardly any trouble to manually add a new page with the required frontmatter whenever I need to–and that way I don’t have to worry about any additional scripts or plugins breaking. It keeps things light-weight.</p>
+
+<h3 id="what-next">What next?</h3>
+
+<p>I plan to keep contributing to this blog, and making changes as I go along. I don’t really have any major plans for the blog itself for the time being. I had considered adding a comment system, but I don’t have the readership for that right now.</p>
+
+<p>I see this site as a way to share information about various projects I’m working on and the things I’m learning. I want to focus primarily on publishing good, substantive content worth reading.</p>
+
+</div>
+            </div>
+            <div class="nav">
+    
+    <a class="nav_link" href="/about.html">
+        about
+    </a>
+    
+    <a class="nav_link" href="/now.html">
+        now
+    </a>
+    
+    <a class="nav_link" href="/archives.html">
+        archives
+    </a>
+    
+    <a class="nav_link" href="/tags.html">
+        tags
+    </a>
+    
+    <a class="nav_link" href="/">
+        home
+    </a>
+    
+</div>
+            <div id="footer">
+    <p>
+        <a href="https://meganrenae.netlify.app/">Megan Renae</a> © 2020&mdash;2025 Megan Durham.
+        <br />
+        Unless otherwise noted, all content on this website is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+    </p>
+</div>
+        </div>
+    </body>
+</html>

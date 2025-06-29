@@ -1,0 +1,5 @@
+_drafts/
+.jekyll-cache/
+.jekyll-metadata
+.git
+.sass-cache/
