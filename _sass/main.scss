@@ -127,6 +127,8 @@ img.avatar {
   flex-direction: column;
   gap: 0;
   width: 150px;
+  max-width: 150px;
+  min-width: 150px;
   background-color: var(--accent-red);
   justify-content: flex-start;
   align-items: stretch;
