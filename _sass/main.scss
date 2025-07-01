@@ -329,6 +329,7 @@ h2 {
 h3 {
   color: var(--dark-base);
   margin-left: 1em;
+  margin-bottom: 0;
   font-family: var(--text-font);
   font-size: 1.3em;
 }
@@ -350,6 +351,10 @@ p {
   color: var(--dark-base);
 }
 
+h3 + p {
+  margin-top: 0;
+}
+
 h4 + p {
   margin-top: 0;
 }
@@ -357,6 +362,7 @@ h4 + p {
 ul {
   list-style-type: none;
   margin: 1em;
+  margin-top: 0;
   padding-left: 0.3em;
   font-family: var(--text-font);
 }
@@ -366,6 +372,17 @@ ul li:before {
   color: var(--accent-red);
   margin-right: 0.2em;
   text-shadow: 1px 1px 0 var(--darkest-black);
+}
+
+ul li li:before {
+  content: "➤";
+  color: var(--accent-red);
+  margin-right: 0.2em;
+  text-shadow: 1px 1px 0 var(--darkest-black);
+}
+
+li {
+  margin: 0;
 }
 
 a {
