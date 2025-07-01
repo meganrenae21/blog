@@ -1,7 +1,10 @@
 ---
 layout: default
 title: Now
+date: 2025-06-30
 ---
+
+*Last updated {{ page.date | date_to_string: "ordinal", "US" }}
 
 ## What I'm up to at the moment
 
@@ -9,8 +12,11 @@ Inspired by the [now page movement](https://nownownow.com/about) which was start
 
 ### Reading
 
-- Currently reading: [Illuminae](https://www.goodreads.com/book/show/23395680-illuminae) by Amie Kaufman and Jay Kristoff.
+- Currently reading: [Vampire: The Masquerade -- Night Road](https://www.choiceofgames.com/vampire-the-masquerade/night-road/) - a Choice of Games interactive fiction novel by Kyle Marquis
+  - It's been a while since I have read a CoG book -- or any kind of interactive fiction, for that matter. But it's something, so I thought I'd check out some of the more popular stories. I've never actually played Vampire: The Masquerade, but I have watched a few actual plays on YouTube -- enough to know it's something I'm interested in. 
+- On temporary pause: [Illuminae](https://www.goodreads.com/book/show/23395680-illuminae) by Amie Kaufman and Jay Kristoff.
   - I put this one off for a while. A few years ago I decided I wanted to start reading less YA and more adult fiction, especially when it comes stories with a big emphasis on romance. Still, the format of this book was intriguing, so I've finally started. 
+  - Updated (**June 30 2025**): I didn't end up finish this in my two-week loan period with my library, so it goes back on hold until I get to it again.  
 - Just finished: [The Mercy of Gods](https://www.goodreads.com/book/show/201930181-the-mercy-of-gods) by James S.A. Corey
   - I don't like starting on-going series before all the books have been published, but [The Expanse](https://www.goodreads.com/series/56399-the-expanse) is one of my all-time favorites and I couldn't wait to read the next epic story Daniel Abraham and Ty Franck (the duo behind the penname) would create together. So now I'm stuck waiting until the next one comes out. 
 - On deck: [The Way of Kings](https://www.goodreads.com/book/show/7235533-the-way-of-kings) by Brandon Sanderson. 
@@ -36,3 +42,4 @@ Right now, this is what I'm working on:
 
 - I recently discovered [The Tarot Cards of Tech](https://tarotcardsoftech.artefactgroup.com/), an elegantly designed set of tarot cards with questions designed to enable people to think about how to build and develop technologies responsibly. These cards were created by [The Artefact Group](https://www.artefactgroup.com/), a consulting and design firm focusing on implementing new technologies responsibly. In the age of AI, the ethical implications of tech and data are reaching into every facet of our lives. These cards are tools to help us consider the consequences of our progress,  in order to direct our world toward positive change and growth. 
   - I love the design of these cards. They ask personal, open-ended questions that have you explore your own values and morals and determine how they align with your work. They help you identify potential pitfalls and dangers that will cause harm, and encourage you to consider how you can do the most good. 
+- This website with [100+ JavaScript Projects](https://www.100jsprojects.com/) aimed at beginner web developers. There are a lot of fun projects to try your hand at here, all of them suitable for someone just starting out and wanting to learn by doing. Check out my version of their [tip calculator](https://codepen.io/megan-durham/pen/GgJLqXM) project. 
