@@ -4,7 +4,7 @@ layout: default
 <div class="post_header">
     <h2 class="post_title">{{ page.title }}</h2>
     <p class="post_meta">
-        <span class="post_date">{{ page.date | date_to_string }}</span>
+        <span class="post_date">{{ page.date | date_to_string: "ordinal", "US" }}</span>
         <span class="tag_list">
             {% for tag in page.tags %}
             <a class="tag_link" href="{{ site.url }}/tags/{{tag}}.html">{{ tag }}</a> 
