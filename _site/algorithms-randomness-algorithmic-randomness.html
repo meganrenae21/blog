@@ -63,7 +63,7 @@
                         <div class="post_header">
     <h2 class="post_title">Algorithms, Randomness, and Algorithmic Randomness</h2>
     <p class="post_meta">
-        <span class="post_date">Oct 14th, 2025</span>
+        <span class="post_date">Oct 18th, 2025</span>
         <span class="tag_list">
             
             <a class="tag_link" href="http://localhost:4000/tags/algorithms.html">algorithms</a> 
@@ -81,23 +81,25 @@
 </div>
 <div class="post_content">
     
-    <p>I find systems that surprise their own creators to be fascinating. This is the beauty of procedural generation. A few lines of code can spawn near-infinite possibilities, all mathmetically adherent to the initial rules established by the programmer.</p>
+    <p>I’m fascinated by systems that can surprise even their own creators. This is the beauty of procedural generation. A few lines of code can spawn near-infinite possibilities, all mathematically bound to the initial rules established by the programmer.</p>
 
-<p>Generative art and procedural generation (or <em>procgen</em>) can be as simple or as complicated as the creator wishes. Generations can be predictable or chaotic. What makes a creation “procedural”? There are two criteria, at least one of which that must be met to qualify: the use of algorithm, and the use of randomness.</p>
+<p>Generative art and procedural generation (or <em>procgen</em>) can be as simple or as complex as you want. Generative art is created with the help of an autonomous system, while procedural generation uses algorithms–and often randomness–to produce content.</p>
+
+<p>The results can be predictable or chaotic. What makes a creation “procedural”? There are two criteria, it usually meets at least one of two criteria: the use of algorithm, and the use of randomness.</p>
 
 <h2 id="random-walks">Random Walks</h2>
 
-<p>The random walk, also known as the drunkard’s walk, may be the simplest pattern of procedural randomness there is. It can be generated in any number of dimensions, but in this post I will demonstrating it within a 2D surface.</p>
+<p>The random walk, also known as the drunkard’s walk, may be the simplest form of procedural randomness. It can be generated in any number of dimensions, but in this post I will demonstrating it within a 2D surface.</p>
 
-<p>Imagine you find yourself in the middle of a grid of paths. There are sidewalks going east–west, and sidewalks going north–south. They are all evenly spaced apart. You are at a crossroads within this grid. You can go in one of four directions.</p>
+<p>Imagine you find yourself in the middle of a grid of paths. There are sidewalks going east and west, and others going north and south. They are all evenly spaced apart. You are at a crossroads within this grid. You can go in one of four directions.</p>
 
 <div class="img-div">
 <img src="../assets/images/stick-figure-grid-of-roads.png" alt="a grid of roads, in the center is a stick figure wondering where to go next" class="post-img" />
 </div>
 
-<p>In a random walk, you would choose a direction at random to walk, and walk in that direction until the next crossroads And then you would again choose a direction at random, and walk in <em>that</em> direction until you reached the next crossroads – and so on.</p>
+<p>In a random walk, you would choose a direction at random to walk, and walk in that direction until the next crossroads. And then you would again choose a direction at random, and walk in <em>that</em> direction until you reached the next crossroads – and so on. Each new step is chosen independently of the previous steps.</p>
 
-<p>In my own rendition of a random walk below, I decided to place a pixel on the canvas at 10% opacity. The position of the next pixel (again at 10% opacity) placed was randomly selected from four possibilities – either directly above, below, to the left, or to the right of the one before it. The next pixel was selected in the same manner, as was the next.</p>
+<p>In my own version, I decided to place a pixel on the canvas at 10% opacity. The position of the next pixel (again at 10% opacity) placed was randomly selected from four possibilities – either directly above, below, left, or right of the one before it. I repeated this process step by step.</p>
 
 <p>What this pattern ends up generating resembles a topographic map. Areas that have been retread multiple times appear darker, while other unexplored areas remain completely white. Over time, more and more of the canvas is filled with color, but the longer it goes, the longer it takes to fill.</p>
 
@@ -180,7 +182,7 @@
 
 <p>Once the maze is complete, you can choose any two points on the grid as your “entrance” and “exit”. There will be exactly one path between them.</p>
 
-<p>As always, there are several adjustments one can make to a maze generation. Instead of using squares as cells, you could use <a href="https://codepen.io/timohausmann/pen/YzyXpr">hexagons</a>. You may try to <a href="https://codepen.io/obsfx/pen/xMQLmd">creative a visualization of your path</a>.<sup id="fnref:5"><a href="#fn:5" class="footnote" rel="footnote" role="doc-noteref">4</a></sup></p>
+<p>As always, there are several adjustments one can make to a maze generation. Instead of using squares as cells, you could use <a href="https://codepen.io/timohausmann/pen/YzyXpr">hexagons</a>. You may try to <a href="https://codepen.io/obsfx/pen/xMQLmd">creative a visualization of your path</a>.<sup id="fnref:4"><a href="#fn:4" class="footnote" rel="footnote" role="doc-noteref">4</a></sup></p>
 
 <h2 id="some-other-neat-patterns">Some other neat patterns</h2>
 
@@ -214,8 +216,8 @@
     <li id="fn:3">
       <p><em>Noise</em> refers to random or pseudo-random variations of brightness or color within an image. For a much better explanation and a tutorial, see <a href="https://varun.ca/noise/">this post by Varun Vachhar</a>. <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:5">
-      <p><a href="https://codepen.io/search/pens?q=maze+generation">Codepen search results for “Maze Generation”</a> <a href="#fnref:5" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    <li id="fn:4">
+      <p><a href="https://codepen.io/search/pens?q=maze+generation">Codepen search results for “Maze Generation”</a> <a href="#fnref:4" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
 </div>
