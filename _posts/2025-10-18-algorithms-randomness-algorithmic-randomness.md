@@ -8,7 +8,7 @@ tags:
     - randomness
 title: "Algorithms, Randomness, and Algorithmic Randomness"
 date: 2025-10-18
-excerpt: "I find the existence of systems that surprise their own creators to be fascinating. This is the beauty of procedural generation."
+excerpt: "I'm fascinated by systems that can surprise even their own creators. This is the beauty of procedural generation."
 permalink: /algorithms-randomness-algorithmic-randomness
 ---
 
