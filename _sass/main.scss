@@ -5,26 +5,35 @@
   --darkest-black: #121212;
   --dark-base: #1A1A1A;
   --dark-grey: #262626;
-  --subtle-grey: #6b6b6b;
+  --subtle-grey: #e3dff2;
   --grey-white: #f1f1f1;
   --bright-white: #f7f7f7;
-  --accent-red: #DD6186;
-  --accent-cyan: #00e0ff;
-  --accent-yellow: #ffddd7;
-  --accent-green: #aaff00;
+  --accent-red: #ff6b6b;
+  --accent-cyan: #69D2E7;
+  --accent-yellow: #fdfd96;
+  --accent-green: #90ee90;
+  --accent-yellow-orange: #F4D738;
+  --accent-orange: #E3A018;
+  --accent-orange-red: #FF7A5C;
+  --accent-pink: #FFB2EF;
+  --accent-magenta: #FF69B4;
+  --accent-purple-blue:#A388EE;
+  --accent-dark-purple: #9723C9;
   --title-font: "Press Start 2P", system-ui;
   --text-font: "Gudea", sans-serif;
   --code-font: "Cutive Mono", monospace;
+  --main-bg: var(--accent-yellow-orange);
+  --main-bg-accent: var(--accent-orange-red);
 }
 
 body {
   background: 
-        linear-gradient(90deg, var(--grey-white), var(--grey-white) 25%, transparent 25%, transparent 75%, var(--grey-white) 75%),
-        linear-gradient(180deg, var(--grey-white), var(--grey-white) 25%, transparent 25%, transparent 75%, var(--grey-white) 75%),
-  linear-gradient(90deg, transparent, transparent 45%, var(--subtle-grey) 45%, var(--subtle-grey) 55%, transparent 55%),
-    linear-gradient(180deg, transparent, transparent 45%, var(--subtle-grey) 45%, var(--subtle-grey) 55%, transparent 55%);
+        linear-gradient(90deg, var(--main-bg), var(--main-bg) 25%, transparent 25%, transparent 75%, var(--main-bg) 75%),
+        linear-gradient(180deg, var(--main-bg), var(--main-bg) 25%, transparent 25%, transparent 75%, var(--main-bg) 75%),
+  linear-gradient(90deg, transparent, transparent 45%, var(--main-bg-accent) 45%, var(--main-bg-accent) 55%, transparent 55%),
+    linear-gradient(180deg, transparent, transparent 45%, var(--main-bg-accent) 45%, var(--main-bg-accent) 55%, transparent 55%);
   background-size: 50px 50px;
-  background-color: var(--grey-white);
+  background-color: var(--main-bg);
 }
 
 #container {
