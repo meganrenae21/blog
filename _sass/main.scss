@@ -65,6 +65,7 @@ body {
   flex-direction: column;
   gap: 0;
   margin: 0;
+  width: 100%;
 }
 
 #header {
@@ -243,26 +244,26 @@ img.avatar {
 }
 
 .tag_list_v {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  column-gap: 1em;
-  place-content: center;
-  row-gap: 1em;
-  align-self: center;
-  width: 60%;
-  margin: 1em 20% 1em 20%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .tag_link_v {
   text-align: center;
   text-decoration: none;
   font-family: var(--text-font);
-  color: var(--accent-red);
+  color: var(--text-accent);
   background-color: var(--darkest-black);
   padding: 0.1em;
+  margin: 0.2em;
   border: 2px solid var(--text-accent);
   font-size: 1em;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .tag_link_v:hover {
