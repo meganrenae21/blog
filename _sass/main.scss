@@ -42,23 +42,20 @@ body {
 #container {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  min-width: 60%;
   margin: 5% 20% 5% 20%;
   justify-content: flex-start;
   align-items: stretch;
   padding: 0;
   gap: 40px;
+  flex-wrap: wrap;
 }
 
 #content_box {
   display: flex;
   flex-direction: row;
-  width: 100%;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
-  margin: 0;
-  padding: 0;
-  gap: 25px;
   background-color: var(--box-bg);
   border-radius: 25px; 
   border: 2px solid var(--box-accent);
@@ -68,9 +65,10 @@ body {
 #main_content {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   gap: 0;
   margin: 0;
-  width: 100%;
+  flex: 1 1 auto;
 }
 
 #header {
@@ -187,7 +185,7 @@ img.avatar {
   color: var(--darkest-black);
   text-decoration: none;
   text-shadow: 3px 3px 0 var(--text-accent);
-  margin-bottom: 0.5em;
+  margin-bottom: 5px;
 }
 
 .post_meta {
@@ -195,12 +193,12 @@ img.avatar {
   flex-direction: row;
   margin-top: 0;
   padding-top: 0;
-  column-gap: 5em;
+  column-gap: 25px;
 }
 
 .post_date {
   font-family: var(--text-font);
-  font-size: 1.3em;
+  font-size: 20px;
   font-weight: 700;
   color: var(--text-accent);
   text-decoration: underline;
@@ -213,7 +211,7 @@ img.avatar {
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
-  gap: 2em;
+  gap: 18px;
 }
 
 .post_list_entry {
@@ -224,13 +222,13 @@ img.avatar {
   font-family: var(--text-font);
   font-size: 1em;
   color: var(--darkest-black);
-  gap: 0.3em;
+  gap: 10px;
 }
 
 .date_heading {
   font-family: var(--title-font);
   font-size: 1em;
-  letter-spacing: 0.2em;
+  letter-spacing: 7px;
   color: var(--darkest-black);
   text-shadow: 1px 1px 0 var(--text-accent);
   width: 100px;
@@ -247,12 +245,12 @@ img.avatar {
 }
 
 .post_list_entry_title {
-  padding: 0.3em;
+  padding: 10px;
 }
 
 .post_list_entry_link {
   font-family: var(--title-font);
-  font-size: 1em;
+  font-size: 15px;
   text-decoration: none;
   color: var(--darkest-black);
 }
@@ -285,8 +283,8 @@ img.avatar {
   font-family: var(--text-font);
   color: var(--text-accent);
   background-color: var(--darkest-black);
-  padding: 0.1em;
-  margin: 0.2em;
+  padding: 4px;
+  margin: 8px;
   border: 2px solid var(--text-accent);
   font-size: 1em;
   font-weight: 500;
@@ -302,11 +300,11 @@ img.avatar {
   text-decoration: none;
   font-family: var(--text-font);
   color: var(--dark-grey);
-  font-size: 0.9em;
+  font-size: 19px;
   text-decoration: underline;
   text-decoration-style: dashed;
   text-decoration-color: var(--main-bg-accent);
-  line-height: 0.2em;
+  line-height: 8px;
 }
 
 .tag_link:hover {
@@ -317,7 +315,7 @@ img.avatar {
 #footer {
   text-align: center;
   font-family: var(--text-font);
-  font-size: 0.9em;
+  font-size: 17px;
   padding: 0;
   margin: 15px;
   line-height: 1em;
@@ -333,9 +331,8 @@ img.avatar {
 
 h2 {
   color: var(--darkest-black);
-  margin-left: 0.5em;
   font-family: var(--text-font);
-  font-size: 1.5em;
+  font-size: 30px;
   text-decoration: underline;
   text-decoration-style: dashed;
   text-decoration-color: var(--text-accent);
@@ -343,26 +340,22 @@ h2 {
 
 h3 {
   color: var(--dark-base);
-  margin-left: 1em;
   margin-bottom: 0;
   font-family: var(--text-font);
-  font-size: 1.3em;
+  font-size: 25px;
 }
 
 h4 {
   color: var(--dark-base);
-  margin-left: 1em;
   font-family: var(--text-font);
-  font-size: 1.1em;
+  font-size: 21px;
   padding-bottom: 0;
   margin-bottom: 0;
 }
 
 p {
-  margin-left: 1em;
-  margin-right: 1em;
   font-family: var(--text-font);
-  font-size: 1em;
+  font-size: 16px;
   color: var(--dark-base);
 }
 
@@ -378,14 +371,14 @@ ul {
   list-style-type: none;
   margin: 1em;
   margin-top: 0;
-  padding-left: 0.3em;
+  padding-left: 9px;
   font-family: var(--text-font);
 }
 
 ul li:before {
   content: "❱";
   color: var(--accent-red);
-  margin-right: 0.2em;
+  margin-right: 7px;
   text-shadow: 1px 1px 0 var(--darkest-black);
 }
 
