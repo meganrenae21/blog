@@ -3,14 +3,14 @@ layout: default
 ---
 <div class="post_header">
     <h2 class="post_title">{{ page.title }}</h2>
-    <p class="post_meta">
-        <span class="post_date">{{ page.date | date_to_string: "ordinal", "US" }}</span>
-        <span class="tag_list">
+    <div class="post_meta">
+        <div class="post_date">{{ page.date | date: "%A, %B %d, %Y" }}</div>
+        <div class="tag_list">
             {% for tag in page.tags %}
-            <a class="tag_link" href="{{ site.url }}/tags/{{tag}}.html">{{ tag }}</a> 
+            <a class="tag_link_post" href="{{ site.url }}/tags/{{tag}}.html">{{ tag }}</a> 
             {% endfor %}
-        </span>
-    </p>
+        </div>
+    </div>
 </div>
 <div class="post_content">
     {% if page.note %}

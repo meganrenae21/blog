@@ -27,7 +27,7 @@
   --box-accent: var(--accent-magenta);
   --text-accent: var(--accent-red);
   --secondary-bg: var(--accent-magenta);
-  --link-color: var(--accent-orange-red);
+  --link-color: var(--accent-dark-purple);
   --alt-link-color: var(--accent-cyan);
 }
 
@@ -188,12 +188,17 @@ img.avatar {
   margin-bottom: 5px;
 }
 
+.post_header {
+  margin-bottom: 15px;
+}
+
 .post_meta {
   display: flex;
   flex-direction: row;
   margin-top: 0;
   padding-top: 0;
-  column-gap: 25px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .post_date {
@@ -201,8 +206,6 @@ img.avatar {
   font-size: 20px;
   font-weight: 700;
   color: var(--text-accent);
-  text-decoration: underline;
-  text-decoration-color: var(--darkest-black);
 }
 
 .post_list {
@@ -325,7 +328,6 @@ img.avatar {
 }
 
 .tag_link {
-  text-decoration: none;
   font-family: var(--text-font);
   color: var(--dark-grey);
   font-size: 16px;
@@ -334,9 +336,22 @@ img.avatar {
   text-decoration-color: var(--main-bg-accent);
 }
 
+.tag_link_post {
+  font-family: var(--text-font);
+  color: var(--main-bg-accent);
+  font-size: 18px;
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-decoration-color: var(--main-bg);
+}
+
 .tag_link:hover {
   color: var(--darkest-black);
   text-decoration-color: var(--accent-red);
+}
+
+.tag_link_post:hover {
+  color: var(--darkest-black);
 }
 
 #footer {
@@ -445,6 +460,7 @@ li {
 a {
   text-decoration: none;
   color: var(--link-color);
+  font-weight: 500;
 }
 
 a:hover {
