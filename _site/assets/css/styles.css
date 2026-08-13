@@ -121,8 +121,9 @@ img.avatar {
 
 #header h1 {
   font-family: var(--title-font);
-  font-size: 2.5rem;
+  font-size: 40px;
   margin-bottom: 0;
+  padding-bottom: 0;
   color: var(--darkest-black);
   text-shadow: 3px 3px 0 var(--text-accent), 6px 6px 0 var(--dark-grey);
 }
@@ -130,12 +131,13 @@ img.avatar {
 #header h2 {
   font-family: var(--text-font);
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 30px;
   color: var(--darkest-black);
-  margin-top: 0.7em;
+  margin: 10px;
+  padding: 0;
   text-decoration: none;
   background-color: var(--text-accent);
-  line-height: 0.8em;
+  line-height: 25px;
   box-shadow: 3px 3px 0 var(--main-bg-accent);
 }
 
@@ -223,15 +225,47 @@ img.avatar {
   gap: 10px;
 }
 
-.date_heading {
+.date_heading_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  border-radius: 10px;
+  box-shadow: 3px 3px 0 var(--darkest-black);
+  overflow: hidden;
+}
+
+.date_heading_month {
+  flex-basis: auto;
+  flex-grow: 1;
+  font-family: var(--text-font);
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--box-bg);
+  background-color: var(--box-accent);
+}
+
+.date_heading_day {
+  flex-basis: auto;
+  flex-grow: 2;
   font-family: var(--title-font);
-  font-size: 1em;
-  letter-spacing: 7px;
+  font-size: 20px;
+  text-align: center;
   color: var(--darkest-black);
   text-shadow: 1px 1px 0 var(--text-accent);
-  width: 100px;
-  text-align: right;
-  border-right: 2px solid var(--box-accent);
+  padding: 10px;
+}
+
+.date_heading_year {
+  flex-basis: auto;
+  flex-grow: 1;
+  font-family: var(--text-font);
+  font-size: 18px;
+  text-align: center;
+  color: var(--box-bg);
+  background-color: var(--box-accent);
+  font-weight: 700;
 }
 
 .post_tags_wrapper {
@@ -240,10 +274,7 @@ img.avatar {
   background-color: var(--box-accent);
   border-radius: 10px;
   box-shadow: 3px 3px 0 var(--darkest-black);
-}
-
-.post_list_entry_title {
-  padding: 10px;
+  padding: 10px 5px;
 }
 
 .post_list_entry_link {
@@ -262,7 +293,6 @@ img.avatar {
   flex-direction: row;
   column-gap: 10px;
   flex-wrap: wrap;
-  margin: 5px;
 }
 
 .tag_list_v {
@@ -298,11 +328,10 @@ img.avatar {
   text-decoration: none;
   font-family: var(--text-font);
   color: var(--dark-grey);
-  font-size: 19px;
+  font-size: 16px;
   text-decoration: underline;
   text-decoration-style: dashed;
   text-decoration-color: var(--main-bg-accent);
-  line-height: 8px;
 }
 
 .tag_link:hover {
@@ -313,10 +342,9 @@ img.avatar {
 #footer {
   text-align: center;
   font-family: var(--text-font);
-  font-size: 17px;
-  padding: 0;
+  font-size: 20px;
+  padding: 10px;
   margin: 15px;
-  line-height: 1em;
   color: var(--dark-base);
   background-color: var(--main-bg);
   border-radius: 15px;
@@ -325,6 +353,11 @@ img.avatar {
 
 #footer a {
   color: var(--alt-link-color);
+}
+
+#footer p {
+  margin: 0;
+  padding: 0;
 }
 
 h2 {
