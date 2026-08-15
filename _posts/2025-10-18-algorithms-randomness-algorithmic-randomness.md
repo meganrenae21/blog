@@ -24,9 +24,7 @@ The random walk, also known as the drunkard's walk, may be the simplest form of 
 
 Imagine you find yourself in the middle of a grid of paths. There are sidewalks going east and west, and others going north and south. They are all evenly spaced apart. You are at a crossroads within this grid. You can go in one of four directions. 
 
-<div class="img-div">
-<img src="../assets/images/stick-figure-grid-of-roads.png" alt="a grid of roads, in the center is a stick figure wondering where to go next" class="post-img">
-</div>
+![a grid of roads, in the center is a stick figure wondering where to go next](/assets/images/stick-figure-grid-of-roads.png){: .post-img-no-caption}
 
 In a random walk, you would choose a direction at random to walk, and walk in that direction until the next crossroads. And then you would again choose a direction at random, and walk in *that* direction until you reached the next crossroads -- and so on. Each new step is chosen independently of the previous steps. 
 
