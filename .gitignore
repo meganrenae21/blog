@@ -4,3 +4,4 @@ _drafts/
 .git
 .sass-cache/
 .vscode/
+.markdownlint.json
