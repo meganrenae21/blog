@@ -1,0 +1,11 @@
+# Site Settings
+
+title: "meganrenae.me"
+tagline: "writer, developer, storyteller"
+url: "https://meganrenae.me"
+author: meganrenae
+
+# Build
+
+plugins:
+  - jekyll-feed
