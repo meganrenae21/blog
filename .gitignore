@@ -3,3 +3,4 @@ _drafts/
 .jekyll-metadata
 .git
 .sass-cache/
+.vscode
