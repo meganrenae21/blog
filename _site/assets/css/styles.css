@@ -230,6 +230,7 @@ img.avatar {
   font-size: 1em;
   color: var(--darkest-black);
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .date_heading_wrapper {
@@ -240,6 +241,7 @@ img.avatar {
   border-radius: 10px;
   box-shadow: 3px 3px 0 var(--darkest-black);
   overflow: hidden;
+  width: 80px;
 }
 
 .date_heading_month {
@@ -278,10 +280,13 @@ img.avatar {
 .post_tags_wrapper {
   flex-basis: auto;
   flex-grow: 3;
+  flex-shrink: auto;
   background-color: var(--box-accent);
   border-radius: 10px;
   box-shadow: 3px 3px 0 var(--darkest-black);
   padding: 10px 5px;
+  flex-wrap: wrap;
+  min-width: 400px;
 }
 
 .post_list_entry_link {
