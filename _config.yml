@@ -1,23 +1,10 @@
-# Site Settings
-
 title: "meganrenae.me"
-tagline: "writer, developer, storyteller"
+description: "Personal creativity and tech blog of Megan Renae"
+author: "Megan Renae"
 url: "https://meganrenae.me"
-author: meganrenae
-
-source: .
-destination: ./_site
-collections_dir: .
-plugins_dir: _plugins
-layouts_dir: _layouts
-data_dir: _data
-includes_dir: _includes
-sass:
-  sass_dir: _sass
-
-
-# Build
 
 plugins:
   - jekyll-feed
 
+feed:
+  tags: true

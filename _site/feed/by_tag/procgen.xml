@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed/by_tag/procgen.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-08-15T19:38:40-05:00</updated><id>http://localhost:4000/feed/by_tag/procgen.xml</id><title type="html">meganrenae.me</title><subtitle>Personal creativity and tech blog of Megan Renae</subtitle><author><name>Megan Renae</name></author><entry><title type="html">Algorithms, Randomness, and Algorithmic Randomness</title><link href="http://localhost:4000/algorithms-randomness-algorithmic-randomness" rel="alternate" type="text/html" title="Algorithms, Randomness, and Algorithmic Randomness" /><published>2025-10-18T00:00:00-05:00</published><updated>2025-10-18T00:00:00-05:00</updated><id>http://localhost:4000/algorithms-randomness-algorithmic-randomness</id><content type="html" xml:base="http://localhost:4000/algorithms-randomness-algorithmic-randomness"><![CDATA[<p>I’m fascinated by systems that can surprise even their own creators. This is the beauty of procedural generation. A few lines of code can spawn near-infinite possibilities, all mathematically bound to the initial rules established by the programmer.</p>
+
+<p>Generative art and procedural generation (or <em>procgen</em>) can be as simple or as complex as you want. Generative art is created with the help of an autonomous system, while procedural generation uses algorithms–and often randomness–to produce content.</p>
+
+<p>The results can be predictable or chaotic. What makes a creation “procedural”? There are two criteria, it usually meets at least one of two criteria: the use of algorithm, and the use of randomness.</p>
+
+<h2 id="random-walks">Random Walks</h2>
+
+<p>The random walk, also known as the drunkard’s walk, may be the simplest form of procedural randomness. It can be generated in any number of dimensions, but in this post I will demonstrating it within a 2D surface.</p>
+
+<p>Imagine you find yourself in the middle of a grid of paths. There are sidewalks going east and west, and others going north and south. They are all evenly spaced apart. You are at a crossroads within this grid. You can go in one of four directions.</p>
+
+<p><img src="/assets/images/stick-figure-grid-of-roads.png" alt="a grid of roads, in the center is a stick figure wondering where to go next" class="post-img-no-caption" /></p>
+
+<p>In a random walk, you would choose a direction at random to walk, and walk in that direction until the next crossroads. And then you would again choose a direction at random, and walk in <em>that</em> direction until you reached the next crossroads – and so on. Each new step is chosen independently of the previous steps.</p>
+
+<p>In my own version, I decided to place a pixel on the canvas at 10% opacity. The position of the next pixel (again at 10% opacity) placed was randomly selected from four possibilities – either directly above, below, left, or right of the one before it. I repeated this process step by step.</p>
+
+<p>What this pattern ends up generating resembles a topographic map. Areas that have been retread multiple times appear darker, while other unexplored areas remain completely white. Over time, more and more of the canvas is filled with color, but the longer it goes, the longer it takes to fill.</p>
+
+<iframe height="500" style="width: 80%;margin-left:10%" scrolling="no" title="Random Walk" src="https://codepen.io/megan-durham/embed/NPGZyXj?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/megan-durham/pen/NPGZyXj">
+  Random Walk</a> by Megan Durham (<a href="https://codepen.io/megan-durham">@megan-durham</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
+
+<p>The pattern can be adjusted in clever ways to generate a variety of effects. By limiting the direction in one dimension – for example, allowing travel up, down, on forward, but not backward – you can generate a <a href="https://codepen.io/konstantindenerz/pen/KKOYdpp">lightning effect like this one</a>. And if you connect the last step to the first with a straight line, <a href="https://codepen.io/DonKarlssonSan/pen/bWWede">you can create geometric shapes resembling buildings</a>.<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup></p>
+
+<h2 id="cellular-automata-conways-game-of-life">Cellular Automata (Conway’s Game of Life)</h2>
+
+<p>A <em>cellular automaton</em> is a visual iterating pattern that uses a grid (of any dimension) consisting of <em>cells</em>. A cell has a certain state, such as <em>on</em> or <em>off</em>, or <em>alive</em> or <em>dead</em>. With each iteration, each cell’s state updates according to the state of its neighbors.</p>
+
+<p>The most famous cellular automaton is John Conway’s “Game of Life”. In this pattern, each cell in a 2D grid has an initial state of “alive” or “dead”. The cells’ states are updated in each iteration according to these rules:</p>
+
+<ol>
+  <li>An “alive” cell with fewer than two “alive” neighbors (neighbors can border a cell horizontally, vertically, or diagonally) will become “dead” (the “underpopulation” rule).</li>
+  <li>An “alive” cell with 2-3 “alive” neighbors will stay alive.</li>
+  <li>An “alive” cell with more than 3 “alive” neigbhors will become dead (the “overpopulation” rule)</li>
+  <li>A dead cell with exactly 3 “alive” neighbors will become “alive” (the “reproduction” rule).</li>
+</ol>
+
+<p>The initial pattern (or seed) can be set manually or, as I’ve done below, set randomly.</p>
+
+<iframe height="500" style="width: 80%;margin-left:10%" scrolling="no" title="cellular automata" src="https://codepen.io/megan-durham/embed/myVqapa?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/megan-durham/pen/myVqapa">
+  cellular automata</a> by Megan Durham (<a href="https://codepen.io/megan-durham">@megan-durham</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
+
+<p>To me, the most interesting thing about this pattern isn’t the illustrations it produces, but how it creates a timelapse that can tell a story of epic scale. Notice how every now and then you’ll have a space of four cells, two on top and two on bottom, that have been stable and alive for several generations, only to be undone by a much larger encroaching pattern venturing from several grid spaces away.</p>
+
+<p>Eventually, most seeds in the Game of Life will settle in to an infinite holding pattern or loop, but some go on forever.</p>
+
+<p>The algorithm itself is simple to implement, and there are options to play around with when it comes to visual customization. You can <a href="https://codepen.io/foretoo/pen/xxeoJoq">stack each generation on top of its predecessors to create a 3D structure</a>. You can <a href="https://codepen.io/bigsweater/pen/borNym">play around with color</a> or go with an <a href="https://codepen.io/safx/pen/MWaKqZ">isometric design</a>.<sup id="fnref:2"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup></p>
+
+<h2 id="recursive-backtracker-maze-generation">Recursive Backtracker Maze Generation</h2>
+
+<p>Now, it’s time to put randomness and algorithmic patterns together. There are several generative patterns that make use of both.</p>
+
+<p>As an example, I made this <a href="https://codepen.io/megan-durham/full/RNWXbjw">spinning hexagon grid</a> by changing the <em>range</em> of the random values determining the speed at which a particular hexagon spins and grows. The closer a hexagon is to the center of the grid, the higher its potential speed.</p>
+
+<p>The spinning hexagon grid can be described as a “noise-like”<sup id="fnref:3"><a href="#fn:3" class="footnote" rel="footnote" role="doc-noteref">3</a></sup> generative pattern.</p>
+
+<p>Another pattern type that uses “algorithmic randomness” is <em>maze generation</em> – which is exactly what the name suggests. <a href="https://en.wikipedia.org/wiki/Maze_generation_algorithm">There are several maze generation algorithms out there</a>. The one I went with below is the <em>recursive backtracker</em> method (or the <em>randomized depth-first search</em> method). This method, which implements that random walk pattern shown earlier, creates a grid and tracks the state of each cell as “visited” and “unvisited”.</p>
+
+<p>Here’s how it works:</p>
+
+<ol>
+  <li>Start with a grid of cells, like in our cellular automaton generation. To start, each cell has four walls (north, east, south, and west). All cells are “unvisited”.</li>
+  <li>Pick a random starting cell and mark it as “visited”.</li>
+  <li>While there are still “unvisited” cells:
+    <ol>
+      <li>From the current cell, if there are any unvisited neighbors:
+        <ol>
+          <li>Randomly choose an unvisited neighbor.</li>
+          <li>Remove the wall between the current cell and the neighbor.</li>
+          <li>Mark the neighbor as the current cell, mark it as visited, and add the previous cell to an array called a “stack” to track the movement.</li>
+        </ol>
+      </li>
+      <li>If the current cell has no unvisited neighbors:
+        <ol>
+          <li>Remove the last cell visited from the stack, and go back to that cell, and repeat the process again.</li>
+        </ol>
+      </li>
+      <li>If the “stack” is empty, all cells have been visited and the loop can be exited. The process is complete.</li>
+    </ol>
+  </li>
+</ol>
+
+<p>And this is the result:</p>
+
+<iframe height="500" style="width: 80%;margin-left:10%" scrolling="no" title="Recursive Backtracker" src="https://codepen.io/megan-durham/embed/pvgpEev?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/megan-durham/pen/pvgpEev">
+  Recursive Backtracker</a> by Megan Durham (<a href="https://codepen.io/megan-durham">@megan-durham</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
+
+<p>Once the maze is complete, you can choose any two points on the grid as your “entrance” and “exit”. There will be exactly one path between them.</p>
+
+<p>As always, there are several adjustments one can make to a maze generation. Instead of using squares as cells, you could use <a href="https://codepen.io/timohausmann/pen/YzyXpr">hexagons</a>. You may try to <a href="https://codepen.io/obsfx/pen/xMQLmd">creative a visualization of your path</a>.<sup id="fnref:4"><a href="#fn:4" class="footnote" rel="footnote" role="doc-noteref">4</a></sup></p>
+
+<h2 id="some-other-neat-patterns">Some other neat patterns</h2>
+
+<ul>
+  <li><a href="https://codepen.io/search/pens?q=Sierpinski+Triangle">Sierpinski Triangle</a></li>
+  <li><a href="https://codepen.io/search/pens?q=tree+branching">Tree branching</a></li>
+  <li><a href="https://codepen.io/search/pens?q=mandelbrot+set">Mandelbrot set</a></li>
+  <li><a href="https://codepen.io/search/pens?q=golden+ratio">Golden ratio</a></li>
+  <li><a href="https://codepen.io/search/pens?q=kaleidoscope">Kaleidoscope</a></li>
+  <li><a href="https://codepen.io/search/pens?q=Bauhaus">Bauhaus</a></li>
+</ul>
+
+<h2 id="recommended-reading">Recommended Reading</h2>
+
+<ul>
+  <li><a href="https://inconvergent.net/generative/">On Generative Algorithms</a> <em>inconvergent (Anders Hoff)</em></li>
+  <li><a href="https://inconvergent.net/generative/">Generative Artistry</a> <em>Ruth John and Tim Holman</em></li>
+  <li><a href="https://bost.ocks.org/mike/algorithms/">Visualizing Algorithms</a> <em>Mike Bostock</em></li>
+</ul>
+
+<h2 id="footnotes">Footnotes</h2>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1">
+      <p><a href="https://codepen.io/DonKarlssonSan/pen/bWWede">Codepen search results for “Random Walk”</a> <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p><a href="https://codepen.io/search/pens?q=game+of+life">Codepen search results for “Game of Life”</a> <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p><em>Noise</em> refers to random or pseudo-random variations of brightness or color within an image. For a much better explanation and a tutorial, see <a href="https://varun.ca/noise/">this post by Varun Vachhar</a>. <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:4">
+      <p><a href="https://codepen.io/search/pens?q=maze+generation">Codepen search results for “Maze Generation”</a> <a href="#fnref:4" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>]]></content><author><name>Megan Renae</name></author><category term="algorithms" /><category term="programming" /><category term="procgen" /><category term="generative-art" /><category term="randomness" /><summary type="html"><![CDATA[I'm fascinated by systems that can surprise even their own creators. This is the beauty of procedural generation.]]></summary></entry></feed>
