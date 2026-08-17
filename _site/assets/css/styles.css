@@ -224,13 +224,14 @@ img.avatar {
 .post_list_entry {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: stretch;
-  font-family: var(--text-font);
-  font-size: 1em;
-  color: var(--darkest-black);
   gap: 10px;
-  flex-wrap: wrap;
+  width: 100%;
+  background-color: var(--box-accent);
+  border-radius: 15px;
+  box-shadow: 5px 5px 0 var(--darkest-black);
+  padding: 5px;
 }
 
 .date_heading_wrapper {
@@ -238,10 +239,13 @@ img.avatar {
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
-  border-radius: 10px;
+  border-radius: 15px;
   box-shadow: 3px 3px 0 var(--darkest-black);
   overflow: hidden;
   width: 80px;
+  min-width: 80px;
+  border: 1px solid var(--darkest-black);
+  background-color: var(--box-bg);
 }
 
 .date_heading_month {
@@ -252,7 +256,7 @@ img.avatar {
   font-weight: 700;
   text-align: center;
   color: var(--box-bg);
-  background-color: var(--box-accent);
+  background-color: var(--main-bg);
 }
 
 .date_heading_day {
@@ -273,7 +277,7 @@ img.avatar {
   font-size: 18px;
   text-align: center;
   color: var(--box-bg);
-  background-color: var(--box-accent);
+  background-color: var(--main-bg);
   font-weight: 700;
 }
 
@@ -281,8 +285,8 @@ img.avatar {
   flex-basis: auto;
   flex-grow: 3;
   flex-shrink: auto;
-  background-color: var(--box-accent);
-  border-radius: 10px;
+  background-color: var(--box-bg);
+  border-radius: 15px;
   box-shadow: 3px 3px 0 var(--darkest-black);
   padding: 10px 5px;
   flex-wrap: wrap;
