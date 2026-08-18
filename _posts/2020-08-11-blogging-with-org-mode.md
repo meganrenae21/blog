@@ -9,6 +9,7 @@ date: 2020-08-11 00:00:00
 note: orgblog
 exerpt: "There's always something new to discover with Emacs and org-mode, and building a blog was my way of wading into deeper waters - no longer content to just get my feet wet."
 permalink: /blogging-with-org-mode
+comments_url: https://komments.cloud/0a1318afb4638ad51e8e68
 ---
 
 There's always something new to discover with Emacs and org-mode, and building a blog was my way of wading into deeper waters - no longer content to just get my feet wet. 

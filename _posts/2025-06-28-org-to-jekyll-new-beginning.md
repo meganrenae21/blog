@@ -7,6 +7,7 @@ title: "From org to jekyll: A new beginning"
 date: 2025-06-28
 excerpt: "It's been nearly five years since I published my first blog post using org-mode. While I loved the novelty of using org-mode to create a publish a static website and blog, and I'm proud that I was able to figure out how to make it work (at least in theory), it ended up being a bit too high-maintenance for me on a practical level. My resolve to DIY my blog from the ground up ended up being its undoing."
 permalink: /org-to-jekyll-new-beginning
+comments_url: https://komments.cloud/79bf7f36f98c683267a4b9
 ---
 
 It's been nearly five years since I published my first blog post using org-mode. While I loved the novelty of using org-mode to create a publish a static website and blog, and I'm proud that I was able to figure out how to make it work (at least in theory), it ended up being a bit too high-maintenance for me on a practical level. My resolve to DIY my blog from the ground up ended up being its undoing. 
