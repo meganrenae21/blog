@@ -10,6 +10,7 @@ title: "Algorithms, Randomness, and Algorithmic Randomness"
 date: 2025-10-18
 excerpt: "I'm fascinated by systems that can surprise even their own creators. This is the beauty of procedural generation."
 permalink: /algorithms-randomness-algorithmic-randomness
+comments_url: https://komments.cloud/294631e4517579debcf10a
 ---
 
 I'm fascinated by systems that can surprise even their own creators. This is the beauty of procedural generation. A few lines of code can spawn near-infinite possibilities, all mathematically bound to the initial rules established by the programmer.

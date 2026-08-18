@@ -9,6 +9,7 @@ date: 2020-08-22 00:00:00
 note: orgblog
 permalink: /org-mode-blog-pt-2
 excerpt: "In my [last post](../blogging-with-org-mode/), I went over how I set up this blog solely in org-mode. And since that post has been published, I've made a few more changes to the configuration and so, in an effort to provide the most up to date information, I figured I'd write a little addendum."
+comments_url: https://komments.cloud/eb583a215ac590da0064d7
 ---
 
 In my [last post](../blogging-with-org-mode/), I went over how I set up this blog solely in org-mode. And since that post has been published, I've made a few more changes to the configuration and so, in an effort to provide the most up to date information, I figured I'd write a little addendum. 
