@@ -57,3 +57,7 @@ A personal knowledge database, loosely based on the Zettlekasten method.
 - [CodePen](http://codepen.io/megan-durham)
 - [dev.to](http://dev.to/meganrenae21)
 - [BlueSky](http://meganrenae.bsky.social)
+
+### Support me:
+
+- [Ko-fi](https://ko-fi.com/meganrenae21)
