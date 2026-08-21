@@ -1,0 +1,12 @@
+---
+layout: default
+title: Blogroll
+---
+
+<h2 class="page_header">Blogroll</h2>
+<ul>
+    {% for item in site.data.blogroll %}
+    <li><a href="{{ item.url }}">{{ item.name }}</a>: {{ item.description }}</li>
+    {% endfor %}
+</ul>
+

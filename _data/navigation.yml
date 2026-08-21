@@ -8,3 +8,5 @@
   link: /tags.html
 - name: home
   link: /
+- name: blogroll
+  link: /blogroll.html
